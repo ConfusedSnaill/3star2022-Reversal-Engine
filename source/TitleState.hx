@@ -89,7 +89,7 @@ class TitleState extends FlxState
 			canSwitch = false;
 			ReversalTools.startGame();
 		}
-		else if ((FlxG.keys.anyJustPressed(ReversalTools.accept) || FlxG.mouse.justPressed) && !canSwitch)
+		else if ((FlxG.keys.anyJustPressed(ReversalTools.accept) || FlxG.mouse.justPressed) && !canSwitch && txt == null)
 		{
 			skipIntro();
 		}
@@ -99,6 +99,10 @@ class TitleState extends FlxState
 		{
 			ReversalTools.closeGame();
 		}
+
+		// resetting
+		if (FlxG.keys.anyJustPressed(ReversalTools.reset))
+			FlxG.resetGame();
 
 		super.update(elapsed);
 	}
