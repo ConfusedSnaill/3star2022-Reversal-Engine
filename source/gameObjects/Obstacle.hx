@@ -1,4 +1,4 @@
-package;
+package gameObjects;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -17,13 +17,12 @@ class Obstacle extends FlxSprite
 		super();
 
 		this.obType = FlxG.random.getObject(rndObj);
-
 		facing = FlxG.random.bool() ? LEFT : RIGHT;
 
 		switch (obType)
 		{
 			case CHEESE:
-				loadGraphic("assets/images/cheese.png", true, 60, 37);
+				loadGraphic(AssetPaths.cheese__png, true, 60, 37);
 				animation.add("idle", [0, 1, 2], 6);
 				animation.play("idle");
 
@@ -36,7 +35,7 @@ class Obstacle extends FlxSprite
 				velocity.y = FlxG.random.float(-140, -310);
 
 			case BOMB:
-				loadGraphic('assets/images/bomb.png', true, 60, 46);
+				loadGraphic(AssetPaths.bomb__png, true, 60, 46);
 				animation.add("idle", [0, 1, 2], 6);
 				animation.play("idle");
 
@@ -51,7 +50,7 @@ class Obstacle extends FlxSprite
 				angularVelocity = FlxG.random.float(360, -360);
 
 			case FULP:
-				loadGraphic("assets/images/fulp.png");
+				loadGraphic(AssetPaths.fulp__png);
 				x = FlxG.random.bool() ? -width : FlxG.width;
 				y = FlxG.height * 0.2;
 				FlxTween.tween(this, {x: (FlxG.width / 2) - (width / 2), angle: 360 * FlxG.random.int(-4, 4)}, FlxG.random.float(0.8, 2),

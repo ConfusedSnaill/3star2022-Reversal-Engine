@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="3star2022" file="3star2022" main="Main" version="0.0.1" company="HaxeFlixel" />
+	<app title="'Reversed Mood' - Reversal Engine" file="ReversalEngine" main="Main" version="0.0.1" company="ConfusedSnail" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
@@ -30,6 +30,10 @@
 	<set name="BUILD_DIR" value="export" />
 	<classpath name="source" />
 	<assets path="assets" />
+
+	<!-- flash excludes ogg files whereas everything else excludes mp3 files-->
+	<assets path="assets" exclude="*.ogg" if="flash"/>
+	<assets path="assets" exclude="*.mp3" unless="flash"/>
 
 	<!-- _______________________________ Libraries ______________________________ -->
 
@@ -80,4 +84,12 @@
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
+	<icon path="icons/icon16.png" size='16'/>
+	<icon path="icons/icon32.png" size='32'/>
+	<icon path="icons/icon64.png" size='64'/>
+	<icon path="icons/icon128.png" size='128'/>
+	<icon path="icons/icon256.png" size='256'/>
+	<icon path="icons/icon512.png" size='512'/>
+	<icon path="icons/iconOG.png" />
+
 </project>
