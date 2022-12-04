@@ -4,7 +4,9 @@ An unofficial engine for ninjamuffin's 『さかさま MOOD』 game
 Reversal Engine is an unofficial engine for ninjamuffin99's game 『さかさま MOOD』(Reversed Mood) made for the 3 star game jam.
 Once I saw the game was open-source I started messing around and ended up changing a ton of stuff.
 
+----------------------------
 # Reversal Engine's Features
+----------------------------
 - Cleaned up and redone a lot of the game's code.
 - Added the option to close the game by pressing ESCAPE on the titlescreen.
 - Added the option to reset the game by hitting R or BACKSPACE on you keyboard.
