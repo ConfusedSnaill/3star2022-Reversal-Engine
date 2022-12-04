@@ -5,7 +5,7 @@ Reversal Engine is an unofficial engine for ninjamuffin99's game 『さかさま
 Once I saw the game was open-source I started messing around and ended up changing a ton of stuff.
 
 ----------------------------
-# Reversal Engine's Features
+#Features
 ----------------------------
 - Cleaned up and redone a lot of the game's code.
 - Added the option to close the game by pressing ESCAPE on the titlescreen.
